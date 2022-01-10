@@ -1,6 +1,8 @@
 import React from 'react';
 import styled, {createGlobalStyle} from 'styled-components';
 import axios from 'axios';
+import Door from './Pages/Door';
+import Scroll from './Pages/Scroll';
 
 axios.defaults.baseURL = 'http://localhost:3001';
 
@@ -8,6 +10,8 @@ function App() {
   return (
     <AppWrap>
       <GlobalStyle />
+      {/*<Door />*/}
+      <Scroll />
     </AppWrap>
   );
 }
@@ -27,7 +31,7 @@ const GlobalStyle = createGlobalStyle`
 
   html, body {
     font-size: 16px;
-    background-color: #000;
+    background-color: #fff;
   }
 
   ul, li, ol {
