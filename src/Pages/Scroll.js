@@ -3,7 +3,11 @@ import '../Style/Scroll.css';
 
 const Scroll = () => {
   const [posY, setPosY] = useState(0);
+  const [maxScrollValue, setMaxScrollValue] = useState(0);
+  const [scrollPer, setScrollPer] = useState(0);
+
   const ref = useRef(null);
+  const barRef = useRef(null);
 
   const showValue = () => {
     // 엘리먼트의 크기와 뷰포트에 상대적인 위치 정보
@@ -14,15 +18,34 @@ const Scroll = () => {
     window.addEventListener('scroll', showValue);
 
     // 원하는 스크롤 위치에서 이벤트 동작
-    if (posY < window.innerHeight * 0.3) {
+    if (posY !== 0 && posY < window.innerHeight * 0.3) {
       ref.current.className = 'zzangu2 zoom';
     } else {
       ref.current.className = 'zzangu2';
     }
   }, [posY]);
 
+  // 상단 스크롤
+  const resizeHandler = () => {
+    setMaxScrollValue(document.body.offsetHeight - window.innerHeight);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', resizeHandler);
+    window.addEventListener('scroll', function () {
+      setScrollPer(window.pageYOffset / maxScrollValue);
+    });
+    barRef.current.style.width = scrollPer * 100 + '%';
+    return () => {
+      resizeHandler();
+    };
+  }, [maxScrollValue, maxScrollValue, scrollPer]);
+
   return (
     <>
+      <div className="progress-bar-con">
+        <div className="progress-bar" ref={barRef} />
+      </div>
       <div className="output">{posY}</div>
       <div className="content">
         <p>

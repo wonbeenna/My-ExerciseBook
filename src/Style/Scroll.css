@@ -24,3 +24,18 @@ img {
 .zzangu2.zoom {
     transform: scale(2) translateX(200px);
 }
+
+.progress-bar-con {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 5px;
+    background: #555;
+}
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background: #00a8ff;
+}

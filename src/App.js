@@ -3,6 +3,7 @@ import styled, {createGlobalStyle} from 'styled-components';
 import axios from 'axios';
 import Door from './Pages/Door';
 import Scroll from './Pages/Scroll';
+import Svg from './Pages/Svg';
 
 axios.defaults.baseURL = 'http://localhost:3001';
 
@@ -11,7 +12,8 @@ function App() {
     <AppWrap>
       <GlobalStyle />
       {/*<Door />*/}
-      <Scroll />
+      {/*<Scroll />*/}
+      <Svg />
     </AppWrap>
   );
 }

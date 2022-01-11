@@ -1,0 +1,27 @@
+.land {
+    fill:skyblue;
+    fill-opacity: 0.7;
+    stroke: white;
+    stroke-opacity: 1;
+    stroke-width: 0.5;
+}
+.land:hover {
+    fill-opacity: 1.0;
+    fill: skyblue
+}
+.row.content {height: 800px}
+#info-box {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    background-color: #ffffff;
+    border: 2px solid #BF0A30;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: arial;
+}
+path:hover{
+    cursor:pointer;
+}
