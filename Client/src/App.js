@@ -4,6 +4,7 @@ import axios from 'axios';
 import Door from './Pages/Door';
 import Scroll from './Pages/Scroll';
 import Svg from './Pages/Svg';
+import Socket from './Pages/Socket';
 
 axios.defaults.baseURL = 'http://localhost:3001';
 
@@ -13,7 +14,8 @@ function App() {
       <GlobalStyle />
       {/*<Door />*/}
       {/*<Scroll />*/}
-      <Svg />
+      {/*<Svg />*/}
+      <Socket />
     </AppWrap>
   );
 }
