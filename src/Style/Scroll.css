@@ -4,7 +4,7 @@ img {
 .content {
     height: 1000vh;
     padding: 20%;
-    background: yellowgreen;
+    /*background: yellowgreen;*/
 }
 .output {
     position: fixed;

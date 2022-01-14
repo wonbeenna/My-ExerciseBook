@@ -11,7 +11,13 @@ const Svg = () => {
     <>
       <div className="row content">
         <div id="info-box" />
-        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" version="1.1">
+        <svg
+          style={{overflow: 'visible'}}
+          height="100%"
+          width="600"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="-250 -40 800 800"
+        >
           <g onClick={(e) => test(e)}>
             <path
               id="KR-11"
