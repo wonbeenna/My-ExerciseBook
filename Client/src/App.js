@@ -5,6 +5,7 @@ import Door from './Pages/Door';
 import Scroll from './Pages/Scroll';
 import Svg from './Pages/Svg';
 import Socket from './Pages/Socket';
+import Mouse from './Pages/Mouse';
 
 axios.defaults.baseURL = 'http://localhost:3001';
 
@@ -15,7 +16,8 @@ function App() {
       {/*<Door />*/}
       {/*<Scroll />*/}
       {/*<Svg />*/}
-      <Socket />
+      {/*<Socket />*/}
+      <Mouse />
     </AppWrap>
   );
 }
