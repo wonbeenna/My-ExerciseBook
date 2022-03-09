@@ -27,13 +27,9 @@ const Mouse = () => {
   }, []);
 
   const loop = () => {
-    console.log(x, y, mx.current, my.current);
-
     mx.current += (x.current - mx.current) * speed.current;
     my.current += (y.current - my.current) * speed.current;
 
-    console.log(x, y, mx.current, my.current);
-    console.log((x - mx) * speed);
     h1Ref.current.innerHTML = 'x: ' + x.current + ' mx: ' + mx.current;
     humanRef.current.style.transform = 'translate(' + mx.current / 9 + 'px,' + my.current / 9 + 'px)';
     wallRef.current.style.transform = 'translate(' + -(mx.current / 8) + 'px,' + -(my.current / 8) + 'px)';

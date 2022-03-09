@@ -6,6 +6,7 @@ import Scroll from './Pages/Scroll';
 import Svg from './Pages/Svg';
 import Socket from './Pages/Socket';
 import Mouse from './Pages/Mouse';
+import Touch from './Pages/Touch';
 
 axios.defaults.baseURL = 'http://localhost:3001';
 
@@ -17,7 +18,8 @@ function App() {
       {/*<Scroll />*/}
       {/*<Svg />*/}
       {/*<Socket />*/}
-      <Mouse />
+      {/*<Mouse />*/}
+      <Touch />
     </AppWrap>
   );
 }
